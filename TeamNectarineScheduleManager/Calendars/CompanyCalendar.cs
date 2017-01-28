@@ -6,9 +6,9 @@ namespace TeamNectarineScheduleManager.Calendars
     public class CompanyCalendar : Calendar
     {
         private const int DaysInAWeek = 7;
-        private readonly int numberOfWorkingDays; // number of working days in the week
+        //private readonly int numberOfWorkingDays; // number of working days in the week
         private int workHoursDay;  // how many work hours all employees should achieve for the company
-        private int workHoursWeek;
+        //private int workHoursWeek;
 
         public CompanyCalendar(int workHoursDay = 200)
         {

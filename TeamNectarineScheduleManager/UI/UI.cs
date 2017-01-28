@@ -140,7 +140,7 @@
                             }
                             break;
                         }
-                       
+
                     case ConsoleKey.D2:
                         {
                             Console.WriteLine();
@@ -194,7 +194,7 @@
         }
 
         private static void AddToWorkersSchedule(RegularWorker toAddTaskTo)
-        { 
+        {
 
             Console.WriteLine("Enter a date to add task to:");
             DateTime addedDate = DateTime.Parse(Console.ReadLine());
@@ -255,8 +255,6 @@
             }
 
             LoggedUser = DataBase.LoadRegularWorker(id);
-
-
         }
 
         private static void AdminLogin()
@@ -400,11 +398,9 @@
                 result.AppendLine(string.Format("User: {0}, Name: {1} {2}", worker.Username, worker.FirstName, worker.LastName, worker.UserType));
             }
 
-
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(result.ToString().Trim());
             Console.ForegroundColor = ConsoleColor.Cyan;
-
         }
 
     }

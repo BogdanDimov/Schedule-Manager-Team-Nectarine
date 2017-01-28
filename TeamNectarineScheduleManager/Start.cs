@@ -14,8 +14,9 @@
     {
         public static void Main()
         {
-            UI.ShowMainMenu();
 
+            TestDataBase();
+            UI.ShowMainMenu();
         }
 
         public static void TeastUsersWorkingWithCalendars()
@@ -89,6 +90,8 @@
             RegularWorker lois = new RegularWorker("Loiss", "HouseWife12345", "Lois", "Griffin");
             RegularWorker chris = new RegularWorker("Chris", "BaseballCap12345", "Chris", "Griffin");
             RegularWorker brian = new RegularWorker("Brian", "TalkingDoggo12345", "Brian", "Griffin");
+            Administrator admin = new Administrator("Adminkata", "gotinata16666", "Adriana", "Popova");
+            DataBase.WriteToDisc(admin);
 
             Team theGriffins = new Team("The Griffins", peter);
             theGriffins.AddMember(lois);
@@ -102,11 +105,11 @@
             DataBase.Save(theGriffins);
 
             TeamLeaderWorker peterReloaded = DataBase.LoadTeamLeader(peter.Username);
-            Console.WriteLine($"{peterReloaded.Username} {peterReloaded.Password} {peterReloaded.FirstName } {peterReloaded.LastName}");
-            for (int i = 0; i < peterReloaded.Team.MembersCount; i++)
-            {
-                Console.WriteLine($"{peterReloaded.Team.Members[i].Username} {peterReloaded.Team.Members[i].Password} {peterReloaded.Team.Members[i].FirstName} {peterReloaded.Team.Members[i].LastName} ");
-            }
+            //Console.WriteLine($"{peterReloaded.Username} {peterReloaded.Password} {peterReloaded.FirstName } {peterReloaded.LastName}");
+            //for (int i = 0; i < peterReloaded.Team.MembersCount; i++)
+            //{
+            //    Console.WriteLine($"{peterReloaded.Team.Members[i].Username} {peterReloaded.Team.Members[i].Password} {peterReloaded.Team.Members[i].FirstName} {peterReloaded.Team.Members[i].LastName} ");
+            //}
         }
     }
 }
